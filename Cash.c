@@ -9,7 +9,7 @@ int main(void)
     {
         dollars = get_float("Change owed: ");
     }
-    while (!(dollars > 0)); //
+    while (!(dollars > 0)); //to validate the input until the user enters the correct format .
     
     int cents = (int)(round(dollars * 100));
     
