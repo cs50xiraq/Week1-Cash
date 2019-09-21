@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+int main(void)
+{
+    float e;              
+    int n = 0;          //Counter 
+    do 
+    { 
+        e = get_float("Change owed: ");   // Prompt in dollars
+    }   
+    while (e <= 0);                       // The condition of the positive value
+    
+    int c = round(e * 100);               // convert from dollar to cent 
+    
+    while (c >= 25)                      // The condtion of how many times Implement
+    {        
+        c = c - 25;
+        n ++;                                // Increasing the counter  
+    }
+    while (c >= 10) 
+    {
+        c -= 10;
+        n ++;
+    } 
+    while (c >= 5)
+    {
+        c -= 5;
+        n ++;
+    }
+    while (c >= 1)
+    {
+        c -= 1;
+        n ++;
+    }     
+    printf("%i\n", n);                // Print the final value of counter
+}
