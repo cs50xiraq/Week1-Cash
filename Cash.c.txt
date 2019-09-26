@@ -1,0 +1,45 @@
+
+#include <cs50.h>
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+    float x;
+    float y;
+    int count = 0;
+    //get the positive dolar;
+    do 
+    {
+        x = get_float("Enter our positive dollars \n");
+    
+        
+    }
+    while (x <= 0);
+    
+    //round your  positive floats by multipluing it by 100;
+    y = round(x * 100);
+    while (y >= 25)
+    {
+        y = y - 25;
+        count++;
+    }
+  
+    while (y >= 10)
+    {
+        y = y - 10;
+        count++;
+    }
+    while (y >= 5)
+    {
+        y = y - 5;
+        count++;
+    }
+    while (y >= 1)
+    {
+        y = y - 1;
+        count++;
+    }
+    
+    printf("%d\n", count);
+}
